@@ -1,0 +1,64 @@
+/* globals.css */
+:root {
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #6366f1;
+  --secondary-foreground: #ffffff;
+  --accent: #0ea5e9;
+  --accent-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --muted: #6b7280;
+  --muted-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #e5e7eb;
+  --chart-1: #2563eb;
+  --chart-2: #6366f1;
+  --chart-3: #0ea5e9;
+  --chart-4: #f59e0b;
+  --chart-5: #ef4444;
+  --radius: 0.5rem;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @apply bg-background text-foreground;
+}
+
+@layer components {
+  .card {
+    @apply bg-card border rounded-lg shadow-sm;
+  }
+  
+  .card-header {
+    @apply pb-4 border-b;
+  }
+  
+  .card-title {
+    @apply text-2xl font-semibold;
+  }
+  
+  .card-description {
+    @apply text-muted-foreground mt-2;
+  }
+}
+
+@layer utilities {
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  .supports-\[backdrop-filter\]\:bg-background\/60 {
+    background-color: rgba(var(--background), 0.6);
+  }
+}
