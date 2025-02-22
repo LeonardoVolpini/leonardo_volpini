@@ -1,21 +1,36 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  @apply bg-background text-foreground;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .card {
+    @apply bg-card border rounded-lg shadow-sm;
+  }
+  
+  .card-header {
+    @apply pb-4 border-b;
+  }
+  
+  .card-title {
+    @apply text-2xl font-semibold;
+  }
+  
+  .card-description {
+    @apply text-muted-foreground mt-2;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  .supports-\[backdrop-filter\]\:bg-background\/60 {
+    background-color: rgba(var(--background), 0.6);
+  }
 }
