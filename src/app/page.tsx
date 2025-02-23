@@ -4,6 +4,7 @@ import { AboutMe } from '@/components/About'
 import { Skills } from '@/components/Skills'
 import { Projects } from '@/components/Projects'
 import { Contacts } from '@/components/Contacts'
+import { HeroSection } from '@/components/Hero'
 
 import { projects } from "@/utils/consts"
 import { skills } from '@/utils/consts'
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Header navItems={navItems}/>
       <main className="min-h-screen">
+        <HeroSection />
         <AboutMe />
         <Skills items={skills}/>
         <Projects items={projects}/>

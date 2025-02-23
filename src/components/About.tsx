@@ -6,7 +6,7 @@ export const AboutMe = () => {
     <section className="min-h-screen flex flex-col items-center justify-center px-4">
       <div className="relative w-32 h-32 mb-8 overflow-hidden rounded-full shadow-lg">
         <Image
-          src="/../images/profile-picture.jpg"
+          src="/images/profile-picture.jpg"
           alt="Leonardo Volpini"
           fill
           priority
