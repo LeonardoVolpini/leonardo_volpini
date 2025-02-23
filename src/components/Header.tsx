@@ -28,7 +28,7 @@ export const Header = ({ navItems }: HeaderProps) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+    <header className="header sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-header/95 border-b">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
           <Link href="/" className="text-xl font-bold">
@@ -44,7 +44,7 @@ export const Header = ({ navItems }: HeaderProps) => {
                       key={index}
                       href={item.href}
                       className={cn(
-                        "flex items-center font-medium text-muted-foreground",
+                        "flex items-center font-medium text-header-foreground",
                         item.disabled && "cursor-not-allowed opacity-80"
                       )}
                     >
@@ -55,6 +55,8 @@ export const Header = ({ navItems }: HeaderProps) => {
             </nav>
           ) : null}
 
+          {/* Dark mode toggle */}
+          {/*
           <div className="flex items-center gap-4">
             <button
               onClick={toggleTheme}
@@ -68,6 +70,7 @@ export const Header = ({ navItems }: HeaderProps) => {
               )}
             </button>
           </div>
+          */}
         </nav>
       </div>
     </header>
