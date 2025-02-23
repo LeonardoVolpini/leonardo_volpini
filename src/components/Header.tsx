@@ -2,8 +2,14 @@
 import Link from "next/link";
 import { Moon, Sun } from 'lucide-react';
 import { useState, useEffect } from "react";
+import { NavItem } from "@/types/nav";
+import { cn } from "@/utils/utils";
 
-export const Header = () => {
+interface HeaderProps {
+  navItems?: NavItem[]
+}
+
+export const Header = ({ navItems }: HeaderProps) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -29,6 +35,26 @@ export const Header = () => {
             L V
           </Link>
 
+          {navItems?.length ? (
+            <nav className="flex gap-6">
+              {navItems?.map(
+                (item, index) =>
+                  item.href && (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className={cn(
+                        "flex items-center text-sm font-medium text-muted-foreground",
+                        item.disabled && "cursor-not-allowed opacity-80"
+                      )}
+                    >
+                      {item.title}
+                    </Link>
+                  )
+              )}
+            </nav>
+          ) : null}
+
           <div className="flex items-center gap-4">
             <button
               onClick={toggleTheme}
@@ -41,10 +67,6 @@ export const Header = () => {
                 <Moon className="w-5 h-5" />
               )}
             </button>
-
-            <Link href="/contact" className="hover:text-primary transition-colors">
-              Contattami
-            </Link>
           </div>
         </nav>
       </div>

@@ -1,7 +1,12 @@
 import { Badge } from "@/components/ui/Badge";
 import { skills } from "@/utils/consts";
+import { SkillItem } from "@/types/skill";
 
-export const Skills = () => {
+interface SkillProps {
+  items?: SkillItem[]
+}
+
+export const Skills = ({items} : SkillProps) => {
   return (
     <section id="skills" className="py-12">
       <div className="container mx-auto px-4">
@@ -10,7 +15,7 @@ export const Skills = () => {
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {skills.map((skill, index) => (
+          {items?.map((skill, index) => (
             <div
               key={index}
               className="bg-card rounded-lg p-4 transition-transform hover:-translate-y-1"

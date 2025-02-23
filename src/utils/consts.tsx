@@ -75,3 +75,26 @@ export const projects = [
         link: "https://projecttwo.com/"
     },
 ]
+
+export const navItems = [
+    {
+        title: "Home",
+        href: "/",
+    },
+    {
+        title: "Chi Sono",
+        href: "/about",
+    },
+    {
+        title: "Skills",
+        href: "/skills",
+    },
+    {
+        title: "Progetti",
+        href: "/projects",
+    },
+    {
+        title: "Contatti",
+        href: "/contact",
+    },
+]

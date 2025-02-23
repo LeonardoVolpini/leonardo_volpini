@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "@/utils/consts";
+import { ProjectItem } from "@/types/project";
 
-export const Projects = () => {
+interface ProjectsProps {
+  items?: ProjectItem[]
+}
+
+export const Projects = ({items}: ProjectsProps) => {
   return (
     <section id="projects" className="py-12 bg-secondary/10">
       <div className="container mx-auto px-4">
@@ -11,7 +15,7 @@ export const Projects = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {items?.map((project) => (
             <article
               key={project.id}
               className="bg-card rounded-lg shadow-sm transition-transform hover:-translate-y-2"
@@ -33,7 +37,7 @@ export const Projects = () => {
                 </div>*/}
 
                 <Link
-                  href={project.link}
+                  href={project.link ?? "#"}  //se il link non esiste allora l'elemento Link non porterà da nessuna parte
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-4 text-primary hover:text-primary/80 transition-colors"
