@@ -95,6 +95,6 @@ export const navItems = [
     },
     {
         title: "Contatti",
-        href: "/contact",
+        href: "/contacts",
     },
 ]

@@ -3,7 +3,7 @@ import { Header } from '@/components/Header'
 import { AboutMe } from '@/components/About'
 import { Skills } from '@/components/Skills'
 import { Projects } from '@/components/Projects'
-import { Contact } from '@/components/Contacts'
+import { Contacts } from '@/components/Contacts'
 
 import { projects } from "@/utils/consts"
 import { skills } from '@/utils/consts'
@@ -17,7 +17,7 @@ export default function Home() {
         <AboutMe />
         <Skills items={skills}/>
         <Projects items={projects}/>
-        <Contact />
+        <Contacts />
       </main>
     </>
   )
