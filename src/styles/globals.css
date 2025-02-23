@@ -96,6 +96,11 @@
   .card-description {
     @apply text-muted-foreground mt-2;
   }
+
+  /*.hero {
+    background-color: #0A124E;
+  }*/
+  
 }
 
 @layer utilities {
