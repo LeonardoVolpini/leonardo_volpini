@@ -28,7 +28,7 @@ export const Header = ({ navItems }: HeaderProps) => {
   };
 
   return (
-    <header className="header sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-header/95 border-b">
+    <header className="header sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-header/95">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
           <Link href="/" className="text-xl font-bold">
