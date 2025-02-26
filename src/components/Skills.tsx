@@ -1,5 +1,4 @@
-import { Badge } from "@/components/ui/Badge";
-import { skills } from "@/utils/consts";
+import { SkillCard } from "./ui/CardSkill";
 import { SkillItem } from "@/types/skill";
 
 interface SkillProps {
@@ -21,8 +20,7 @@ export const Skills = ({items} : SkillProps) => {
               className="bg-card rounded-lg p-4 transition-transform hover:-translate-y-1"
             >
               <div className="flex justify-between items-center">
-                <span className="font-medium">{skill.name}</span>
-                <Badge variant="secondary">{skill.icon}</Badge>
+                <SkillCard skill={skill} />
               </div>
             </div>
           ))}

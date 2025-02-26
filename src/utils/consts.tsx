@@ -1,63 +1,71 @@
+import { Icons } from "@/components/ui/Icons"
+
+//per trovare gli svg per nuove skills andare sul sito https://simpleicons.org/
 export const skills = [
     {
         name: "HTML",
-        icon: "html5",
-        color: "#e34f26",
+        icon: Icons.html5,
+        color: "#E34F26",
     },
     {
         name: "CSS",
-        icon: "css3",
-        color: "#1572b6",
+        icon: Icons.css3,
+        color: "#1572B6",
+    },
+    {
+        name: "Tailwind CSS",
+        icon: Icons.tailwindCSS,
+        color: "#06B6D4",
     },
     {
         name: "JavaScript",
-        icon: "javascript",
-        color: "#f7df1e",
+        icon: Icons.javascript,
+        color: "#F7DF1E",
     },
     {
         name: "TypeScript",
-        icon: "typescript",
-        color: "#007acc",
+        icon: Icons.typescript,
+        color: "#3178C6",
     },
     {
         name: "React",
-        icon: "react",
-        color: "#61dafb",
+        icon: Icons.react,
+        color: "#61DAFB",
     },
     {
         name: "Next.js",
-        icon: "next-dot-js",
+        icon: Icons.nextJs,
         color: "#000000",
     },
     {
         name: "Node.js",
-        icon: "node-dot-js",
-        color: "#339933",
+        icon: Icons.nodeJs,
+        color: "#5FA04E",
     },
     {
-        name: "Express",
-        icon: "express",
-        color: "#000000",
+        name: "MySQL",
+        icon: Icons.mySQL,
+        color: "#4479A1",
     },
     {
         name: "MongoDB",
-        icon: "mongodb",
-        color: "#47a248",
+        icon: Icons.mongoDB,
+        color: "#47A248",
     },
     {
         name: "Git",
-        icon: "git",
-        color: "#f05032",
+        icon: Icons.git,
+        color: "#F05032",
     },
     {
         name: "GitHub",
-        icon: "github",
+        icon: Icons.github,
         color: "#181717",
     },
     {
         name: "Figma",
-        icon: "figma",
-        color: "#f24e1e",
+        icon: Icons.figma,
+        color: "#F24E1E",
     },
 ]
 

@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { Moon, Sun } from 'lucide-react';
+//import { Moon, Sun } from 'lucide-react';
 import { useState, useEffect } from "react";
 import { NavItem } from "@/types/nav";
 import { cn } from "@/utils/utils";

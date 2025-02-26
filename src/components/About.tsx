@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { ArrowDownCircle } from "lucide-react";
 
 export const AboutMe = () => {
   return (
     <section className="min-h-screen flex flex-col md:flex-row items-start justify-center px-8 md:px-16 mt-16">
       {/* Sezione Testo - 2/3 */}
-      <div className="md:w-2/3 flex flex-col items-start md:items-start text-center md:text-left">
+      <div className="md:w-2/3 pr-10 flex flex-col items-start md:items-start text-center md:text-left">
         <p className="text-2xl" style={{ color: '#1729e6' }}>
           Due parole su di me:
         </p>
@@ -14,11 +13,12 @@ export const AboutMe = () => {
           Aiuto aziende e piccoli imprenditori a creare e gestire il loro spazio nel mercato digitale.
         </h1>
 
-        <p className="mt-4 text-muted-foreground max-w-md">
-          Sviluppatore Software presso Leonardo SpA.
-          <br />
-          Creo e gestisco il tuo business digitale.
+        <p className="mt-4 text-muted-foreground text-xl">
+          Sono un ragazzo di 25 anni con una laurea triennale in ingegneria gestionale e una magistrale in ingegneria informatica, entrambe ottenute presso il dal Politecnico di Torino.<br />
+          Da due anni sviluppo software per la Leonardo SpA, ma la mia vera passione è aiutare aziende e freelancer a crescere online. <br />
+          Perciò creo siti web e sviluppo software su misura per semplificare e ottimizzare il loro lavoro.
         </p>
+
       </div>
 
       {/* Sezione Immagine - 1/3 */}
