@@ -97,10 +97,10 @@ export const navItems = [
         title: "Skills",
         href: "/skills",
     },
-    {
-        title: "Progetti",
+    /*{
+        title: "Progetti",  //TODO
         href: "/projects",
-    },
+    },*/
     {
         title: "Contatti",
         href: "/contacts",

@@ -9,7 +9,7 @@ export const SkillCard = ({ skill }: SkillCardProps) => {
   return (
     <div className="w-40 h-40 bg-card rounded-xl p-6 shadow-md flex flex-col items-center justify-center transition-transform hover:-translate-y-2">
       <IconComponent className="w-12 h-12" color={skill.color ?? ""} />
-      <span className="font-bold text-lg text-center">
+      <span className="font-bold text-lg text-center pt-2">
         {skill.name}
       </span>
     </div>

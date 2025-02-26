@@ -21,7 +21,7 @@ export const HeroSection = () => {
           Accedi a strategie, consigli e strumenti per acquisire un pubblico e guadagnare sul web.
         </p>
         <a
-          href="#learn-more"  //TODO
+          href="#"  //TODO
           className="inline-block bg-primary hover:bg-primary/80 text-white py-3 px-6 rounded transition-colors"
         >
           Scopri di più

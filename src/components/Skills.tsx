@@ -8,7 +8,7 @@ interface SkillProps {
 export const Skills = ({items} : SkillProps) => {
   return (
     <section id="skills" className="py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-12">
         <h2 className="text-3xl font-bold text-center mb-8">
           Competenze Tecniche
         </h2>
