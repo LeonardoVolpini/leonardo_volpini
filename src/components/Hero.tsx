@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { Form } from "./Form"
+import { ContactForm } from "./Form"
 
 export const HeroSection = () => {
   return (
@@ -20,7 +20,7 @@ export const HeroSection = () => {
         <p className="text-lg md:text-2xl text-white mb-8">
           Compila il modulo per ricevere una prima consulenza gratuita.
         </p>
-        <Form />
+        <ContactForm />
       </div>
     </section>
   )
