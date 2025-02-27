@@ -9,7 +9,6 @@ import { HeroSection } from '@/components/Hero'
 import { projects } from "@/utils/consts"
 import { skills } from '@/utils/consts'
 import { navItems } from '@/utils/consts'
-import { Form } from '@/components/Form'
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
         <AboutMe />
         <Skills items={skills}/>
         {/*<Projects items={projects}/>  {/*TODO: quando avrò i progetti da mostrare*/}
-        <Form />
         <Contacts />
       </main>
     </>

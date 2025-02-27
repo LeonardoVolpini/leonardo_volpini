@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import Image from "next/image"
+import { Form } from "./Form"
 
 export const HeroSection = () => {
   return (
@@ -15,17 +15,12 @@ export const HeroSection = () => {
       {/* Contenuto della hero */}
       <div className="relative z-10 w-full md:w-8/12 text-center px-4 pl-10 md:pl-20">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-          Impara ad emergere nel mercato digitale
+          Entra subito nel mercato digitale
         </h1>
         <p className="text-lg md:text-2xl text-white mb-8">
-          Accedi a strategie, consigli e strumenti per acquisire un pubblico e guadagnare sul web.
+          Compila il modulo per ricevere una prima consulenza gratuita.
         </p>
-        <a
-          href="#"  //TODO
-          className="inline-block bg-primary hover:bg-primary/80 text-white py-3 px-6 rounded transition-colors"
-        >
-          Scopri di più
-        </a>
+        <Form />
       </div>
     </section>
   )
