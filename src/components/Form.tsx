@@ -79,8 +79,6 @@ export const ContactForm = () => {
     } finally {
       setIsSubmitting(false);
     }
-
-    console.log("Dati inviati: ", formData.privacy);
   };
 
   return (
