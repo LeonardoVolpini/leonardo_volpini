@@ -19,7 +19,7 @@ export const ContactForm = () => {
     nome: "",
     cognome: "",
     email: "",
-    cellulare: "",
+    cellulare: "39",
     newsletter: false,
     privacy: false,
   });

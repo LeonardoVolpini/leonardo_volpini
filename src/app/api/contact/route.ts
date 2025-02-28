@@ -1,7 +1,7 @@
 // pages/api/contact.ts
 import { NextResponse } from 'next/server'
 import { validate } from 'email-validator'
-import { saveDataFormToDatabase } from '@/database/contact'
+import { saveDataFormToDatabase, sendThankEmail } from '@/database/contact'
 
 export async function POST(req: Request) {
   try {
@@ -35,8 +35,11 @@ export async function POST(req: Request) {
     })
 
     // Invia email di conferma
-    if (email && newsletter) {
-      //await sendConfirmationEmail(email, nome)  TODO
+    if (email) {
+      await sendThankEmail(email, nome)
+      if(newsletter) {
+        //TODO: invio prima email per una newsletter
+      }
     }
 
     console.log('Messaggio inviato con successo')
