@@ -8,23 +8,24 @@ const anonClient = createClient(config.supabaseUrl, config.supabaseAnonKey)
 
 export async function saveDataFormToDatabase(data: Omit<DataForm, "id">): Promise<DataForm> {
   try{
-    const { data: messages, error } = await supabase
-    .from('messages')
+    const { data: insertedRows, error } = await supabase
+    .from('utenti')   //nome della tabella nel db di supabase
     .insert([{
       ...data,
       id: crypto.randomUUID(),
-    }]) as { data: DataForm[] | null, error: any }
+    }])
+    .select();
 
     if (error) {
       throw error
     }
 
-    if (!messages || messages.length === 0) {
+    if (!insertedRows || insertedRows.length === 0) {
       throw new Error('Nessun messaggio salvato')
     }
     
-    console.log('Messaggio salvato con successo:', messages[0])
-    return messages[0]
+    //console.log('Messaggio salvato con successo:', insertedRows[0]);
+    return insertedRows[0]
   } catch (error) {
     throw error
   }
