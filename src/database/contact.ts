@@ -40,6 +40,26 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+export async function checkEmailExistence(email: string): Promise<boolean> {
+  try {
+    const { data, error } = await supabase
+      .from('utenti')
+      .select('id')
+      .eq('email', email)
+      .single();  
+
+    if (error) {
+      throw new Error('Errore nel recupero dei dati: ' + error.message);
+    }
+
+    // Se la query restituisce dei dati, l'email esiste già
+    return data !== null;
+  } catch (error) {
+    console.error('Errore nel controllo della email: ', error);
+    throw error;
+  }
+}
+
 export async function sendThankEmail(email: string, nome: string) {
   try {
     console.log('Invio email di conferma a: ', email);

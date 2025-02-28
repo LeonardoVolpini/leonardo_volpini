@@ -72,7 +72,12 @@ export const ContactForm = () => {
           privacy: false,
         });
       } else {
-        console.log("Errore nell'invio del messaggio");
+        const data = await response.json();
+        if(response.status === 409) {
+          setError(data.error || "Email già registrata");
+        } else {
+          setError(data.error || "Errore nel server");
+        }
       }
     } catch (error) {
       console.log("Errore nel server: " + error);

@@ -1,7 +1,7 @@
 // pages/api/contact.ts
 import { NextResponse } from 'next/server'
 import { validate } from 'email-validator'
-import { saveDataFormToDatabase, sendThankEmail } from '@/database/contact'
+import { checkEmailExistence, saveDataFormToDatabase, sendThankEmail } from '@/database/contact'
 
 export async function POST(req: Request) {
   try {
@@ -20,6 +20,14 @@ export async function POST(req: Request) {
       return NextResponse.json(
         { error: "Email non valida" },
         { status: 400 }
+      );
+    }
+
+    const emailExists = await checkEmailExistence(email);
+    if (emailExists) {
+      return NextResponse.json(
+        { error: "Email già registrata" },
+        { status: 409 }  // Conflict status
       );
     }
 
