@@ -174,9 +174,9 @@ export const ContactForm = () => {
             onChange={(e) => setFormData({...formData, privacy: !formData.privacy})}
             className="w-5 h-5 mt-1 text-red-600 border-gray-300 rounded focus:ring-gray-900"
           />
-          <label htmlFor="privacy" className="ml-3 text-gray-700">
-            Acconsento al trattamento dati personali <span className="text-red-500">*</span>
-          </label>
+            <label htmlFor="privacy" className="ml-3 text-gray-700">
+              Acconsento al <a href="/privacy-policy" className="text-blue-700 underline">trattamento dati personali</a> <span className="text-red-500">*</span>
+            </label>
         </div>
         {error && <p className="text-red-500 text-sm">{error}</p>}
 
