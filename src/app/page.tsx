@@ -5,6 +5,7 @@ import { Skills } from '@/components/Skills'
 import { Projects } from '@/components/Projects'
 import { Contacts } from '@/components/Contacts'
 import { HeroSection } from '@/components/Hero'
+import { Footer } from '@/components/Footer'
 
 import { projects } from "@/utils/consts"
 import { skills } from '@/utils/consts'
@@ -20,6 +21,7 @@ export default function Home() {
         <Skills items={skills}/>
         {/*<Projects items={projects}/>  {/*TODO: quando avrò i progetti da mostrare*/}
         <Contacts />
+        <Footer />
       </main>
     </>
   )
