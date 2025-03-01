@@ -10,6 +10,7 @@ import { Footer } from '@/components/Footer'
 import { projects } from "@/utils/consts"
 import { skills } from '@/utils/consts'
 import { navItems } from '@/utils/consts'
+import { CookieBanner } from '@/components/CookieBanner'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         {/*<Projects items={projects}/>  {/*TODO: quando avrò i progetti da mostrare*/}
         <Contacts />
         <Footer />
+        <CookieBanner />
       </main>
     </>
   )
