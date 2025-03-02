@@ -1,5 +1,6 @@
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
-import { Mail, Phone } from 'lucide-react';
+import MyMail from './utils/MyMail';
+import MyPhone from './utils/MyPhone';
 
 export const Footer = () => {
   return (
@@ -12,15 +13,9 @@ export const Footer = () => {
 
         {/* Link alle Pagine Importanti */}
         <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <Mail className="w-5 h-5 text-secondary" />
-            <span>volpini.leonardo@gmail.com</span>
-          </div>
+          <MyMail textColor='text-secondary'/>
 
-          <div className="flex items-center gap-3">
-            <Phone className="w-5 h-5 text-secondary" />
-            <span>+39 320 7159594</span>
-          </div>
+          <MyPhone textColor='text-secondary'/>
         </div>
 
         {/* Social Media */}

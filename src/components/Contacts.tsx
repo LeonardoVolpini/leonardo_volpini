@@ -1,9 +1,10 @@
-import { Mail, Phone } from 'lucide-react';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
+import MyMail from './utils/MyMail';
+import MyPhone from './utils/MyPhone';
 
 export const Contacts = () => {
   return (
-    <section id="contact" className="pt-12">
+    <section id="contact" className="pt-4">
       <div className="container mx-auto px-4">
 
         <div className="max-w-2xl mx-auto">
@@ -12,15 +13,9 @@ export const Contacts = () => {
               <h3 className="text-lg font-semibold mb-6">Informazioni di Contatto</h3>
 
               <div className="space-y-8">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-primary" />
-                  <span>volpini.leonardo@gmail.com</span>
-                </div>
+                <MyMail textColor='text-primary' />
 
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <span>+39 320 7159594</span>
-                </div>
+                <MyPhone textColor='text-primary' />
               </div>
             </div>
 

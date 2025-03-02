@@ -21,6 +21,9 @@ export default function Home() {
         <AboutMe />
         <Skills items={skills}/>
         {/*<Projects items={projects}/>  {/*TODO: quando avrò i progetti da mostrare*/}
+        <h2 className="text-3xl font-bold text-center mt-12">
+          Contattami
+        </h2>
         <Contacts />
         <Footer />
         <CookieBanner />

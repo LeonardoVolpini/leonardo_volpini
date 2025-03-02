@@ -10,6 +10,7 @@ export default function ContactsPage() {
         <Header navItems={navItems} />
         <div className="mt-8" />
         <ContactForm />
+        <div className="mt-4" />
         <Contacts />
         <Footer />
       </>
