@@ -87,7 +87,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+    <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl border border-gray-200">
       <h2 className="text-3xl font-semibold text-gray-900 text-center mb-4">
         Compila il modulo
       </h2>
