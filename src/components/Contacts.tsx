@@ -1,19 +1,17 @@
 import { Mail, Phone } from 'lucide-react';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export const Contacts = () => {
   return (
     <section id="contact" className="pt-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          Contattami
-        </h2>
 
         <div className="max-w-2xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-card rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-4">Informazioni di Contatto</h3>
+              <h3 className="text-lg font-semibold mb-6">Informazioni di Contatto</h3>
 
-              <div className="space-y-4">
+              <div className="space-y-8">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-primary" />
                   <span>volpini.leonardo@gmail.com</span>
@@ -34,18 +32,20 @@ export const Contacts = () => {
                   href="https://www.linkedin.com/in/leonardo-volpini/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 w-full p-3 bg-secondary rounded-md hover:bg-secondary/80 transition-colors"
+                  className="flex items-center gap-3 w-full p-3 bg-secondary rounded-md hover:bg-secondary/80 hover:text-blue-500 transition-colors"
                 >
+                  <FaLinkedin />
                   <span className="text-primary">LinkedIn</span>
                 </a>
 
                 <a
-                  href="https://github.com/LeonardoVolpini"
+                  href="https://www.instagram.com/leonardo_volpini/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 w-full p-3 bg-secondary rounded-md hover:bg-secondary/80 transition-colors"
+                  className="flex items-center gap-3 w-full p-3 bg-secondary rounded-md hover:bg-secondary/80 hover:text-rose-400 transition-colors"
                 >
-                  <span className="text-primary">GitHub</span>
+                  <FaInstagram />
+                  <span className="text-primary">Instagram</span>
                 </a>
               </div>
             </div>

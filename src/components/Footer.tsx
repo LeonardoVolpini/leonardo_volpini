@@ -1,4 +1,5 @@
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { Mail, Phone } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -10,10 +11,16 @@ export const Footer = () => {
         </div>
 
         {/* Link alle Pagine Importanti */}
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-          <a href="#about" className="text-lg hover:text-gray-400">Chi Sono</a>
-          <a href="#skills" className="text-lg hover:text-gray-400">Skills</a>
-          <a href="#contacts" className="text-lg hover:text-gray-400">Contatti</a>
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <Mail className="w-5 h-5 text-secondary" />
+            <span>volpini.leonardo@gmail.com</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <Phone className="w-5 h-5 text-secondary" />
+            <span>+39 320 7159594</span>
+          </div>
         </div>
 
         {/* Social Media */}
