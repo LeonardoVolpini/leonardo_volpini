@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 
 export const CookieBanner = () => {
-  const [showBanner, setShowBanner] = useState(true)
+  const [showBanner, setShowBanner] = useState(false)
   const [preferences, setPreferences] = useState({
     essential: true,
     analytics: false,
@@ -15,6 +15,8 @@ export const CookieBanner = () => {
     if (savedPreferences) {
       setPreferences(JSON.parse(savedPreferences))
       setShowBanner(false)
+    } else {
+      setShowBanner(true)
     }
   }, [])
 
@@ -24,6 +26,7 @@ export const CookieBanner = () => {
       [type]: true
     }))
     savePreferences()
+    setShowBanner(false)
   }
 
   const handleDecline = () => {
