@@ -1,7 +1,8 @@
 // pages/api/contact.ts
 import { NextResponse } from 'next/server'
 import { validate } from 'email-validator'
-import { checkEmailExistence, saveDataFormToDatabase, sendThankEmail } from '@/database/contact'
+import { checkEmailExistence, saveDataFormToDatabase } from '@/database/contact'
+import { sendThankEmail } from '@/server/email'
 
 export async function POST(req: Request) {
   try {

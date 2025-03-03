@@ -1,7 +1,6 @@
 import { DataForm } from "@/types/dataForm";
 import { createClient } from "@supabase/supabase-js";
 import { validateSupabaseConfig } from "@/utils/config";
-import nodemailer from 'nodemailer';
 
 const config = validateSupabaseConfig();
 const supabase = createClient(config.supabaseUrl, config.supabaseServiceKey)
@@ -32,56 +31,23 @@ export async function saveDataFormToDatabase(data: Omit<DataForm, "id">): Promis
   }
 }
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-});
-
 export async function checkEmailExistence(email: string): Promise<boolean> {
   try {
     const { data, error } = await supabase
       .from('utenti')
       .select('id')
-      .eq('email', email)
-      .single();  
+      .eq('email', email);
+
+      console.log("data: " + data);
 
     if (error) {
       throw new Error('Errore nel recupero dei dati: ' + error.message);
     }
 
-    // Se la query restituisce dei dati, l'email esiste già
-    return data !== null;
+    // Se la query restituisce dei dati, l'email esiste già quindi restituisco true; altrimenti false
+    return data === null;
   } catch (error) {
     console.error('Errore nel controllo della email: ', error);
     throw error;
-  }
-}
-
-export async function sendThankEmail(email: string, nome: string) {
-  try {
-    console.log('Invio email di conferma a: ', email);
-    const mailOptions = {
-      from: `"Leonardo Volpini" <${process.env.GMAIL_USER}>`,
-      to: email,
-      subject: 'Grazie per averci contattato!',
-      html: `
-        <p>Ciao <strong>${nome}</strong>,</p>
-        <p>Grazie per aver compilato il nostro form!</p>
-        <p>Vorremmo offrirti una prima chiamata conoscitiva gratuita per capire meglio le tue esigenze.</p>
-        <p>Rispondi a questa email per fissare un appuntamento.</p>
-        <br>
-        <p>A presto,</p>
-        <p><strong>Il Team</strong></p>
-      `,  //TODO: anziche far rispondere alla mail metterò un link a calendfy
-    };
-
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Email inviata: ', info.messageId);
-  } catch (error) {
-    console.error("Errore nell'invio della email: ", error);
-    throw new Error("Errore nell'invio della email");
   }
 }

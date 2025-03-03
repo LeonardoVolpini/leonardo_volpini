@@ -11,11 +11,10 @@ export const Footer = () => {
           <h3 className="text-3xl font-semibold">Leonardo Volpini</h3>
         </div>
 
-        {/* Link alle Pagine Importanti */}
-        <div className="space-y-4">
-          <MyMail textColor='text-secondary'/>
-
-          <MyPhone textColor='text-secondary'/>
+        {/* Informazioni di Contatto */}
+        <div className="flex gap-12">
+          <MyMail textColor="text-secondary" />
+          <MyPhone textColor="text-secondary" />
         </div>
 
         {/* Social Media */}
