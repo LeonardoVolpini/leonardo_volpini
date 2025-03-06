@@ -10,7 +10,7 @@ export const HeroSection = () => {
       style={{ backgroundImage: "url('/images/hero-background.jpg')" }}   //TODO: immagine da cambiare, sfondo più scuro (mettere #040927) e mia foto da avere più nitida e grossa
     >
 
-      <div className="relative w-full md:w-8/12 text-center px-4 pl-10 md:pl-20">
+      <div className="relative w-full md:w-8/12 text-center px-4 md:pl-20">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
           Entra subito nel mercato digitale
         </h1>

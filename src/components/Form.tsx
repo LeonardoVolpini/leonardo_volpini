@@ -152,6 +152,7 @@ export const ContactForm = () => {
           />
         </div>
 
+        {/* Checkbox Newsletter (Facolyativa) */}
         <div className="flex items-start">
           <input
             type="checkbox"

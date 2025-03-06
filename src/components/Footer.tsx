@@ -12,7 +12,7 @@ export const Footer = () => {
         </div>
 
         {/* Informazioni di Contatto */}
-        <div className="flex gap-12">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12">   {/* Sulla stessa riga nel desktop, su righe diverse su mobile */}
           <MyMail textColor="text-secondary" />
           <MyPhone textColor="text-secondary" />
         </div>

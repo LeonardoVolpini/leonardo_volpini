@@ -6,13 +6,15 @@ import { navItems } from '@/utils/consts'
 
 export default function ContactsPage() {
   return (
-      <>
-        <Header navItems={navItems} />
-        <div className="mt-8" />
+    <>
+      <Header navItems={navItems} />
+      <div className="mt-8" />
+      <div className="px-4">
         <ContactForm />
-        <div className="mt-4" />
-        <Contacts />
-        <Footer />
-      </>
-    )
+      </div>
+      <div className="mt-4" />
+      <Contacts />
+      <Footer />
+    </>
+  )
 }
