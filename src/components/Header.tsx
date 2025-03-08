@@ -10,7 +10,7 @@ interface HeaderProps {
 }
 
 export const Header = ({ navItems }: HeaderProps) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  /*const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const selectedTheme = localStorage.getItem('theme') as 'light' | 'dark';
@@ -25,7 +25,7 @@ export const Header = ({ navItems }: HeaderProps) => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle('dark', !isDarkMode);
     localStorage.setItem('theme', newTheme);
-  };
+  };*/
 
   return (
     <header className="header sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-header/95">

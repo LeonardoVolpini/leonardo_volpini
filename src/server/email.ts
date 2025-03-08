@@ -28,7 +28,7 @@ export async function sendThankEmail(email: string, nome: string) {
     };
 
     const info = await transporter.sendMail(mailOptions);
-    console.log('Email inviata a: ', email);
+    console.log('Email inviata a: ' + email + ' con esito: ', info);
   } catch (error) {
     console.error("Errore nell'invio della email: ", error);
     throw new Error("Errore nell'invio della email");

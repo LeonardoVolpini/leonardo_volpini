@@ -43,6 +43,11 @@ export const skills = [
         color: "#5FA04E",
     },
     {
+        name: "Kotlin",
+        icon: Icons.kotlin,
+        color: "#7F52FF",
+    },
+    {
         name: "MySQL",
         icon: Icons.mySQL,
         color: "#4479A1",

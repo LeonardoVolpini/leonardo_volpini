@@ -4,7 +4,7 @@ import { validateSupabaseConfig } from "@/utils/config";
 
 const config = validateSupabaseConfig();
 const supabase = createClient(config.supabaseUrl, config.supabaseServiceKey)
-const anonClient = createClient(config.supabaseUrl, config.supabaseAnonKey)
+//const anonClient = createClient(config.supabaseUrl, config.supabaseAnonKey)
 
 export async function saveDataFormToDatabase(data: Omit<DataForm, "id">): Promise<DataForm> {
   try{

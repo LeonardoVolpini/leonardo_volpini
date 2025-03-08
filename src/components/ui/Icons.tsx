@@ -58,6 +58,15 @@ export const Icons = {
       />
     </svg>
   ),
+  kotlin: (props: LucideProps) => (
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <title>Kotlin</title>
+      <path
+        fill="currentColor"
+        d="M24 24H0V0h24L12 12Z"
+      />
+    </svg>
+  ),
   mongoDB: (props: LucideProps) => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
       <title>MongoDB</title>
