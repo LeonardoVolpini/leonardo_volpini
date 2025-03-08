@@ -158,7 +158,7 @@ export const ContactForm = () => {
             type="checkbox"
             id="newsletter"
             checked={formData.newsletter}
-            onChange={(e) => setFormData({...formData, newsletter: !formData.newsletter})}
+            onChange={() => setFormData({...formData, newsletter: !formData.newsletter})}
             className="w-5 h-5 mt-1 text-red-600 border-gray-300 rounded focus:ring-gray-900"
           />
           <label htmlFor="newsletter" className="ml-3 text-gray-700">
@@ -172,7 +172,7 @@ export const ContactForm = () => {
             type="checkbox"
             id="privacy"
             checked={formData.privacy}
-            onChange={(e) => setFormData({...formData, privacy: !formData.privacy})}
+            onChange={() => setFormData({...formData, privacy: !formData.privacy})}
             className="w-5 h-5 mt-1 text-red-600 border-gray-300 rounded focus:ring-gray-900"
           />
             <label htmlFor="privacy" className="ml-3 text-gray-700">

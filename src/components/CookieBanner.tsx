@@ -63,15 +63,15 @@ export const CookieBanner = () => {
             </p>
 
             <p>
-              Cliccando su <strong>"Accetta"</strong>, acconsenti all’uso dei cookie analitici e di marketing.
+              Cliccando su <strong>&quot;Accetta&quot;</strong>, acconsenti all&apos;uso dei cookie analitici e di marketing.
             </p>
             <p>
-              Cliccando su <strong>"Rifiuta"</strong>, potrai continuare a navigare senza un’esperienza personalizzata.
+              Cliccando su <strong>&quot;Rifiuta&quot;</strong>, potrai continuare a navigare senza un’esperienza personalizzata.
             </p>
 
             <p className="text-s text-muted-foreground">
               Puoi modificare le tue preferenze in qualsiasi momento accedendo alla sezione
-              <strong> "Gestisci le impostazioni sui cookie"</strong> in calce al sito.
+              <strong> &quot;Gestisci le impostazioni sui cookie&quot;</strong> in calce al sito.
             </p>
           </div>
         </div>
