@@ -1,9 +1,15 @@
-import type { LucideIcon, LucideProps } from 'lucide-react'
+import { type LucideIcon, type LucideProps, Briefcase, Code, MonitorSmartphone, Wrench, UserCheck } from 'lucide-react'
 import { JSX } from 'react'
 
 export type Icon = LucideIcon | ((props: LucideProps) => JSX.Element)
 
 export const Icons = {
+  briefcase: Briefcase,
+  code: Code,
+  monitorSmartphone: MonitorSmartphone,
+  wrench: Wrench,
+  userCheck: UserCheck,
+  /* Add SVG icons here, for skills */
   cxx: (props: LucideProps) => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
       <title>C++</title>

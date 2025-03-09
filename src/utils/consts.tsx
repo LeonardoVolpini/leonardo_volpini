@@ -104,6 +104,34 @@ export const projects = [
     },
 ]
 
+export const services = [
+    {
+        title: "Sviluppo Siti Web",
+        description: "Creazione di siti web moderni, responsive e performanti.",
+        icon: Icons.monitorSmartphone
+      },
+      {
+        title: "Sviluppo Software",
+        description: "Software personalizzati per ogni tua evenienza.",
+        icon: Icons.code
+      },
+      {
+        title: "Sviluppo Applicazioni",
+        description: "App web e mobile sia per iOS che per Android.",
+        icon: Icons.briefcase
+      },
+      {
+        title: "Consulenza Informatica",
+        description: "Supporto e strategie per gestire e migliorare il tuo business digitale.",
+        icon: Icons.userCheck
+      },
+      {
+        title: "Manutenzione Software",
+        description: "Aggiornamenti, bug fix e assistenza sui prodotti sviluppati.",
+        icon: Icons.wrench
+      },
+]
+
 export const navItems = [
     {
         title: "Home",
@@ -116,6 +144,10 @@ export const navItems = [
     {
         title: "Skills",
         href: "/skills",
+    },
+    {
+        title: "Servizi",
+        href: "/services",
     },
     /*{
         title: "Progetti",  //TODO
