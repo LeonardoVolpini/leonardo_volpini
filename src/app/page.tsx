@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 // pages/index.tsx
 import { Header } from '@/components/Header'
 import { AboutMe } from '@/components/About'
@@ -15,11 +17,16 @@ import { CookieBanner } from '@/components/CookieBanner'
 export default function Home() {
   return (
     <>
-      <Header navItems={navItems}/>
+      <Head>
+        <title>Home - Leonardo Volpini</title>
+        <meta name="description" content="Leonardo Volpini - pagina principale del sito" />
+        <meta property="og:description" content="Leonardo Volpini - pagina principale del sito" />
+      </Head>
+      <Header navItems={navItems} />
       <main className="min-h-screen">
         <HeroSection />
         <AboutMe />
-        <Skills items={skills}/>
+        <Skills items={skills} />
         {/*<Projects items={projects}/>  {/*TODO: quando avrò i progetti da mostrare*/}
         <h2 className="text-3xl font-bold text-center mt-12">
           Contattami

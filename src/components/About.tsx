@@ -26,7 +26,7 @@ export const AboutMe = () => {
         <div className="relative w-full h-[80vh] overflow-hidden rounded-lg shadow-lg">
           <Image
             src="/images/profile-picture.jpg"
-            alt="Leonardo Volpini"
+            alt="Immagine personale di Leonardo Volpini"
             fill
             priority
             className="object-cover"

@@ -28,9 +28,10 @@ export const Services = ({ items }: ServicesProps) => {
         <div className="mt-12 flex justify-center">
           <Link
             href="/contacts"
-            className="px-6 py-3 bg-header/95 text-header-foreground rounded-lg text-lg font-semibold hover:hover:bg-blue-700 transition"
+            className="px-6 py-3 bg-header/95 text-header-foreground rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
           >
-            Contattami per una prima consulenza gratuita
+            <span className="block sm:hidden">Contattami</span>
+            <span className="hidden sm:block">Contattami per una prima consulenza gratuita</span>
           </Link>
         </div>
 
