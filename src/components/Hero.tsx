@@ -4,10 +4,10 @@ import React from "react"
 import { ContactForm } from "./Form"
 
 export const HeroSection = () => {
+  //Se su desktop uso l'immagine come sfondo, se su mobile un colore
   return (
     <section
-      className="relative h-screen flex items-center justify-start bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/hero-background.jpg')" }}   //TODO: immagine da cambiare, sfondo più scuro (mettere #040927) e mia foto da avere più nitida e grossa
+      className="relative h-screen flex items-center justify-start bg-cover bg-center md:bg-[url('/images/hero-background.jpg')] bg-[#040927]"
     >
 
       <div className="relative w-full md:w-8/12 text-center px-4 md:pl-20">

@@ -27,6 +27,7 @@ export const Contacts = () => {
                   href="https://www.linkedin.com/in/leonardo-volpini/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn Profile"
                   className="flex items-center gap-3 w-full p-3 bg-secondary rounded-md hover:bg-secondary/80 hover:text-blue-500 transition-colors"
                 >
                   <FaLinkedin />
@@ -37,6 +38,7 @@ export const Contacts = () => {
                   href="https://www.instagram.com/leonardo_volpini/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram Profile"
                   className="flex items-center gap-3 w-full p-3 bg-secondary rounded-md hover:bg-secondary/80 hover:text-rose-400 transition-colors"
                 >
                   <FaInstagram />

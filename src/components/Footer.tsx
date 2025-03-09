@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="container flex flex-col md:flex-row items-center justify-between">
         {/* Logo o Nome */}
         <div className="flex items-center space-x-4 mb-6 md:mb-0">
-          <h3 className="text-3xl font-semibold">Leonardo Volpini</h3>
+          <h1 className="text-3xl font-semibold">Leonardo Volpini</h1>
         </div>
 
         {/* Informazioni di Contatto */}
@@ -19,13 +19,13 @@ export const Footer = () => {
 
         {/* Social Media */}
         <div className="flex space-x-6 mt-6 md:mt-0">
-          <a href="https://www.linkedin.com/in/leonardo-volpini/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-500">
+          <a href="https://www.linkedin.com/in/leonardo-volpini/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-2xl hover:text-blue-500">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/LeonardoVolpini" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-400">
+          <a href="https://github.com/LeonardoVolpini" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-2xl hover:text-gray-400">
             <FaGithub />
           </a>
-          <a href="https://www.instagram.com/leonardo_volpini/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-rose-400">
+          <a href="https://www.instagram.com/leonardo_volpini/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" className="text-2xl hover:text-rose-400">
             <FaInstagram />
           </a>
         </div>

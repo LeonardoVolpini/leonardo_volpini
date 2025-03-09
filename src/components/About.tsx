@@ -22,7 +22,7 @@ export const AboutMe = () => {
       </div>
 
       {/* Sezione Immagine - 1/3 */}
-      <div className="md:w-1/3 flex justify-center items-center mt-8 md:mt-0">
+      <div className="hidden md:flex md:w-1/3 justify-center items-center mt-8 md:mt-0">
         <div className="relative w-full h-[80vh] overflow-hidden rounded-lg shadow-lg">
           <Image
             src="/images/profile-picture.jpg"
