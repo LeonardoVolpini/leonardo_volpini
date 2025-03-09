@@ -1,5 +1,6 @@
 import { ServiceItem } from "@/types/service";
 import { ServiceCard } from "./ui/CardService";
+import Link from "next/link";
 
 interface ServicesProps {
   items?: ServiceItem[]
@@ -7,7 +8,7 @@ interface ServicesProps {
 
 export const Services = ({ items }: ServicesProps) => {
   return (
-    <section className="py-16 bg-background">
+    <section className="pt-16 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-foreground mb-12">
           I miei servizi
@@ -22,6 +23,17 @@ export const Services = ({ items }: ServicesProps) => {
             </div>
           ))}
         </div>
+
+        {/* CTA - Pulsante per contattarti */}
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/contacts"
+            className="px-6 py-3 bg-header/95 text-header-foreground rounded-lg text-lg font-semibold hover:hover:bg-blue-700 transition"
+          >
+            Contattami per una prima consulenza gratuita
+          </Link>
+        </div>
+
       </div>
     </section>
   );
