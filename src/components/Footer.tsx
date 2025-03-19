@@ -33,7 +33,7 @@ export const Footer = () => {
 
       {/* Diritti d'Autore */}
       <div className="mt-8 text-center text-sm text-gray-400">
-        <p>&copy; {new Date().getFullYear()} Leonardo Volpini - Privacy Policy - P.IVA: 00000000000</p>
+        <p>&copy; {new Date().getFullYear()} Leonardo Volpini - Privacy Policy</p>  {/*TODO: aggiungere la P.IVA: 00000000000 */}
       </div>
     </footer>
   );
