@@ -1,5 +1,3 @@
-//import Image from "next/image";
-import Link from "next/link";
 import { ProjectItem } from "@/types/project";
 import { ProjectCard } from "./ui/CardProject";
 
