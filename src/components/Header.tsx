@@ -45,7 +45,8 @@ export const Header = ({ navItems }: HeaderProps) => {
                       href={item.href}
                       className={cn(
                         "flex items-center font-medium text-header-foreground",
-                        item.title === "Chi Sono" ? "hidden min-[410px]:block" : "",     // Nasconde "Chi Sono" su schermi piccoli
+                        item.title === "Chi Sono" ? "hidden min-[600px]:block" : "",     // Nasconde "Chi Sono" su schermi piccoli
+                        item.title === "Skills" ? "hidden min-[420px]:block" : "",       // Nasconde "Chi Sono" su schermi piccoli
                         item.disabled && "cursor-not-allowed opacity-80"
                       )}
                     >

@@ -9,11 +9,11 @@ interface ServicesProps {
 export const Services = ({ items }: ServicesProps) => {
   return (
     <section className="pt-16 bg-background">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-foreground mb-12">
           I miei servizi
         </h2>
-        <div className="grid grid-cols-1 gap-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-8">
           {items?.map((service, index) => (
             <div
               key={index}

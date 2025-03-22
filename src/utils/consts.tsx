@@ -92,15 +92,11 @@ export const skills = [
 export const projects = [
     {
         id: 1,
-        title: "Portfolio",
-        description: "Il mio sito personale.",
-        link: "https://leonardovolpini.com/"
-    },
-    {
-        id: 2,
-        title: "Progetto 2",
-        description: "Secondo progetto.",
-        link: "https://projecttwo.com/"
+        title: "ETF Tracking Bot",
+        description: "Il bot Telegram, @ETFtrackingBot, monitora automaticamente gli ETF e invia notifiche " +
+            "quando il prezzo scende di una percentuale specificata rispetto al massimo degli ultimi x giorni.\n" + 
+            "Successivamente invia notifiche solamente se il prezzo scende di un ulteriore punto percentuale o recupera per rientra dentro la soglia.",
+        link: "https://github.com/LeonardoVolpini/bot-telegram-etf-tracker" // https://t.me/ETFtrackingBot
     },
 ]
 
@@ -149,10 +145,10 @@ export const navItems = [
         title: "Servizi",
         href: "/services",
     },
-    /*{
-        title: "Progetti",  //TODO
+    {
+        title: "Progetti",
         href: "/projects",
-    },*/
+    },
     {
         title: "Contatti",
         href: "/contacts",
