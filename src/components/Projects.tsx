@@ -16,7 +16,7 @@ export const Projects = ({ items }: ProjectsProps) => {
         <p className="my-4 text-muted-foreground text-xl">
           Alcuni progetti che ho realizzato per dei clienti in passato. <br />
           Ogni soluzione è stata sviluppata su misura per soddisfare esigenze specifiche, combinando funzionalità, performance e usabilità. <br />
-          Se hai un'idea o un'esigenza particolare, <a href="/contacts" className="text-blue-700 underline">contattami per discuterne insieme!</a>
+          Se hai un&apos;idea o un&apos;esigenza particolare, <a href="/contacts" className="text-blue-700 underline">contattami per discuterne insieme!</a>
         </p>
 
         <div className="grid grid-cols-1 gap-y-8">
