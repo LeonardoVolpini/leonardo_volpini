@@ -1,6 +1,5 @@
 import { TestimonialItem } from "@/types/testimonial";
 import { TestimonialCard } from "./ui/CardTestimonial";
-import Link from "next/link";
 
 interface TestimonialProps {
   items?: TestimonialItem[]

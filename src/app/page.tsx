@@ -9,7 +9,7 @@ import { Services } from "@/components/Services";
 import { Contacts } from '@/components/Contacts'
 import { Footer } from '@/components/Footer'
 
-import { projects, services, testimonials, navItems } from '@/utils/consts'
+import { projects, services, /*testimonials,*/ navItems } from '@/utils/consts'
 import { CookieBanner } from '@/components/CookieBanner'
 
 export default function Home() {
