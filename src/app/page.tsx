@@ -1,15 +1,15 @@
 import Head from "next/head";
 
 import { Header } from '@/components/Header'
+import { HeroSection } from '@/components/Hero'
 import { AboutMe } from '@/components/About'
 import { Projects } from '@/components/Projects'
+//import { Testimonials } from "@/components/Testimonials";
+import { Services } from "@/components/Services";
 import { Contacts } from '@/components/Contacts'
-import { HeroSection } from '@/components/Hero'
 import { Footer } from '@/components/Footer'
-import Services from "@/components/Services";
 
-import { projects } from "@/utils/consts"
-import { services, navItems } from '@/utils/consts'
+import { projects, services, testimonials, navItems } from '@/utils/consts'
 import { CookieBanner } from '@/components/CookieBanner'
 
 export default function Home() {
@@ -25,6 +25,7 @@ export default function Home() {
         <HeroSection />
         <AboutMe />
         <Projects items={projects}/>  {/*TODO: quando avrò i progetti da mostrare*/}
+        {/*<Testimonials items={testimonials}/>  {/*TODO: quando avrò testimonianze da mostrare*/}
         <Services items={services}/>
         <br />
         <Contacts />

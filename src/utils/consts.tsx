@@ -154,3 +154,22 @@ export const navItems = [
         href: "/contacts",
     },
 ]
+
+// TODO: sostituire con vere testimonianze
+export const testimonials = [
+    {
+      name: "Mario Rossi",
+      role: "CEO di Startup X",
+      feedback: "Lavorare con Leonardo è stato fantastico! Sito super performante e ottimo supporto.",
+    },
+    {
+      name: "Giulia Bianchi",
+      role: "Marketing Manager",
+      feedback: "Professionalità e velocità! Il nostro sito ora è ottimizzato e performante.",
+    },
+    {
+      name: "Luca Verdi",
+      role: "Freelance Designer",
+      feedback: "Collaborazione perfetta, codice pulito e ben documentato.",
+    },
+  ];

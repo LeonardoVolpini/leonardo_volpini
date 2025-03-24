@@ -7,7 +7,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="w-full bg-card rounded-xl p-2 flex flex-row items-center gap-6 transition-transform hover:-translate-y-2">
+    <div className="w-full bg-card rounded-xl p-2 flex flex-row items-center gap-6 transition-transform hover:-translate-y-1">
 
       <div>
         <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
