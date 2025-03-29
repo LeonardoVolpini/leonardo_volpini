@@ -1,4 +1,3 @@
-// app/blog/[slug]/page.tsx
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
@@ -23,8 +22,10 @@ export async function generateStaticParams() {
   });
 }
 
-export default async function PostPage({ params }: Params) {
-  const { slug } = (await Promise.resolve(params)) as { slug: string };     //forzato a any per risolvere compatibilità per typescrit nel deploy su Vercel
+export default async function PostPage({
+  params,
+}: { params: { slug: string } }) {
+  const { slug } = await (async () => params)();  // Forziamo l'attesa dei parametri tramite una IIFE asincrona per compatibilità con il deploy su Vercel, altrimenti sarebbe bastato:   const { slug } = await Promise.resolve(params);
   const filePath = path.join(process.cwd(), "content", "blog", `${slug}.mdx`);
   const fileContents = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(fileContents);
