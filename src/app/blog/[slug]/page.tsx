@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { navItems } from '@/utils/consts'
 
-interface PostPageProps {
+interface Params {
   params: { slug: string };
 }
 
@@ -23,8 +23,8 @@ export async function generateStaticParams() {
   });
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  const { slug } = await Promise.resolve(params);
+export default async function PostPage({ params }: Params) {
+  const { slug } = await Promise.resolve(params as any);
   const filePath = path.join(process.cwd(), "content", "blog", `${slug}.mdx`);
   const fileContents = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(fileContents);
