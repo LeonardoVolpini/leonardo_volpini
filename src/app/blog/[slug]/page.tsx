@@ -8,10 +8,6 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { navItems } from '@/utils/consts'
 
-interface Params {
-  params: { slug: string };
-}
-
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), "content", "blog");
   const filenames = await fs.readdir(postsDirectory);
