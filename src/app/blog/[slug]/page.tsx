@@ -30,8 +30,6 @@ export default async function PostPage({ params }: Params) {
   const { data, content } = matter(fileContents);
 
   const mdxSource = await serialize(content);
-  // Convertiamo mdxSource in una stringa per poterlo passare al client component
-  const serializedMdxSource = JSON.stringify(mdxSource);
 
   const frontMatter = data as BlogItem;
 
@@ -39,10 +37,8 @@ export default async function PostPage({ params }: Params) {
     <>
       <Header navItems={navItems} />
       <article className="max-w-3xl mx-auto p-8">
-        <h1 className="text-3xl font-bold mb-4">{frontMatter.title}</h1>
-        <p className="text-muted-foreground mb-8">{frontMatter.excerpt}</p>
 
-        <ClientMdxRenderer serializedMdxSource={serializedMdxSource} />
+        <ClientMdxRenderer mdxSource={mdxSource} />
       </article>
       <Footer />
     </>

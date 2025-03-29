@@ -4,13 +4,11 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { useEffect, useState } from 'react';
 
 interface ClientMdxRendererProps {
-  serializedMdxSource: string;
+  mdxSource: MDXRemoteSerializeResult;
 }
 
-export default function ClientMdxRenderer({ serializedMdxSource }: ClientMdxRendererProps) {
-  // Parsifichiamo il contenuto MDX serializzato
-  const mdxSource = JSON.parse(serializedMdxSource) as MDXRemoteSerializeResult;
-  
+export default function ClientMdxRenderer({ mdxSource }: ClientMdxRendererProps) {
+
   // Assicuriamoci che il componente sia montato prima di renderizzare MDX
   const [isMounted, setIsMounted] = useState(false);
 
@@ -22,6 +20,9 @@ export default function ClientMdxRenderer({ serializedMdxSource }: ClientMdxRend
   if (!isMounted) {
     return <div>Caricamento contenuto...</div>;
   }
-
-  return <MDXRemote {...mdxSource} />;
+  return (
+    <div className="prose max-w-3xl">
+      <MDXRemote {...mdxSource} />
+    </div>
+  );
 }
