@@ -18,10 +18,12 @@ export async function generateStaticParams() {
   });
 }
 
-export default async function PostPage({
-  params,
-}: { params: { slug: string } }) {
-  const { slug } = await (async () => params)();  // Forziamo l'attesa dei parametri tramite una IIFE asincrona per compatibilità con il deploy su Vercel, altrimenti sarebbe bastato:   const { slug } = await Promise.resolve(params);
+// Definiamo il tipo dei parametri come unknown, per poi convertirli all'interno della funzione
+export default async function PostPage({ params: rawParams }: { params: unknown }) {
+  // Risolviamo e facciamo il cast di rawParams a { slug: string }
+  // Forziamo l'attesa dei parametri per compatibilità con il deploy su Vercel, altrimenti sarebbe bastato:   const { slug } = await Promise.resolve(params);
+  const params = await Promise.resolve(rawParams) as { slug: string };
+  const { slug } = params;
   const filePath = path.join(process.cwd(), "content", "blog", `${slug}.mdx`);
   const fileContents = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(fileContents);
