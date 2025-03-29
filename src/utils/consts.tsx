@@ -149,10 +149,10 @@ export const navItems = [
         title: "Skills",
         href: "/skills",
     },
-    /*{
+    {
         title: "Blog",
         href: "/blog",
-    },*/
+    },
     {
         title: "Contatti",
         href: "/contacts",
