@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }: Params) {
-  const { slug } = await Promise.resolve(params as any);
+  const { slug } = (await Promise.resolve(params)) as { slug: string };     //forzato a any per risolvere compatibilità per typescrit nel deploy su Vercel
   const filePath = path.join(process.cwd(), "content", "blog", `${slug}.mdx`);
   const fileContents = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(fileContents);
