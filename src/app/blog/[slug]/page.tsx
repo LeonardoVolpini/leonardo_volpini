@@ -8,6 +8,8 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { navItems } from '@/utils/consts'
 
+type Params = Promise<{ slug: string }>;
+
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), "content", "blog");
   const filenames = await fs.readdir(postsDirectory);
@@ -18,12 +20,8 @@ export async function generateStaticParams() {
   });
 }
 
-// Definiamo il tipo dei parametri come unknown, per poi convertirli all'interno della funzione
-export default async function PostPage({ params: rawParams }: { params: unknown }) {
-  // Risolviamo e facciamo il cast di rawParams a { slug: string }
-  // Forziamo l'attesa dei parametri per compatibilità con il deploy su Vercel, altrimenti sarebbe bastato:   const { slug } = await Promise.resolve(params);
-  const params = await Promise.resolve(rawParams) as { slug: string };
-  const { slug } = params;
+export default async function PostPage( { params }: { params: Params } ) {
+  const { slug } = await params;  
   const filePath = path.join(process.cwd(), "content", "blog", `${slug}.mdx`);
   const fileContents = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(fileContents);
