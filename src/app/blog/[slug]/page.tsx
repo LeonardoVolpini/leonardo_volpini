@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
-import { BlogItem } from "@/types/blog";
+//import { BlogItem } from "@/types/blog";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { navItems } from '@/utils/consts';
@@ -27,11 +27,11 @@ export default async function PostPage({ params }: Params) {
 
   const filePath = path.join(process.cwd(), "content", "blog", `${slug}.mdx`);
   const fileContents = await fs.readFile(filePath, "utf8");
-  const { data, content } = matter(fileContents);
+  const { /*data,*/ content } = matter(fileContents);
 
   const mdxSource = await serialize(content);
 
-  const frontMatter = data as BlogItem;
+  //const frontMatter = data as BlogItem;
 
   return (
     <>
