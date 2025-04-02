@@ -1,6 +1,6 @@
 "use client";
 
-import { Send } from "lucide-react";
+import { Send, Loader } from "lucide-react";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -189,7 +189,7 @@ export const ContactForm = () => {
           {isSubmitting ? (
           <>
             <span>Invio in corso...</span>
-            <Send className="ml-2 h-4 w-4 animate-spin" />
+            <Loader className="ml-2 h-4 w-4 animate-spin" />
           </>
         ) : (
           <>

@@ -14,12 +14,12 @@ export async function sendThankEmail(email: string, nome: string) {
     const mailOptions = {
       from: `"Leonardo Volpini" <${process.env.GMAIL_USER}>`,
       to: email,
-      subject: 'Grazie per averci contattato!',
+      subject: 'Grazie per avermi contattato!',
       html: `
           <p>Ciao <strong>${nome}</strong>,</p>
-          <p>Grazie per aver compilato il nostro form!</p>
-          <p>Vorremmo offrirti una prima chiamata conoscitiva gratuita per capire meglio le tue esigenze.</p>
-          <p>Prenota un appuntamento direttamente dal nostro calendario:</p>
+          <p>Grazie per aver compilato il form!</p>
+          <p>Vorrei offrirti una prima chiamata conoscitiva gratuita per capire meglio le tue esigenze.</p>
+          <p>Prenota un appuntamento direttamente dal calendario:</p>
           <p><a href="https://cal.com/leonardovolpini/first-call" target="_blank" style="color: #007bff; text-decoration: underline;">📅 Prenota la tua chiamata</a></p>
           <br>
           <p>A presto,</p>
@@ -28,7 +28,7 @@ export async function sendThankEmail(email: string, nome: string) {
     };
 
     const info = await transporter.sendMail(mailOptions);
-    console.log('Email inviata a: ' + email + ' con esito: ', info);
+    console.log('Email inviata a: ' + email + ' con esito: ', info.accepted ? info.accepted : info.rejected);
   } catch (error) {
     console.error("Errore nell'invio della email: ", error);
     throw new Error("Errore nell'invio della email");
