@@ -38,8 +38,6 @@ export async function checkEmailExistence(email: string): Promise<boolean> {
       .select('id')
       .eq('email', email);
 
-      console.log("data: " + data);
-
     if (error) {
       throw new Error('Errore nel recupero dei dati: ' + error.message);
     }
