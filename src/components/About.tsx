@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const AboutMe = () => {
   return (
-    <section className="flex flex-col md:flex-row items-start justify-center px-8 md:px-16 mt-16">
+    <section className="flex flex-col md:flex-row items-start justify-center mx-16 px-16 md:px-24 md:mx-24 lg:px-32 lg:mx-32 mt-16">
       {/* Sezione Testo - 2/3 */}
       <div className="md:w-2/3 pr-10 flex flex-col items-start md:items-start text-center md:text-left">
         <p className="text-2xl" style={{ color: '#1729e6' }}>
