@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import MyMail from './utils/MyMail';
 import MyPhone from './utils/MyPhone';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -31,9 +32,15 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Diritti d'Autore */}
+      {/* Copyright */}
       <div className="mt-8 text-center text-sm text-gray-400">
-        <p>&copy; {new Date().getFullYear()} Leonardo Volpini - Privacy Policy</p>  {/*TODO: aggiungere la P.IVA: 00000000000 */}
+        <span>
+          &copy; {new Date().getFullYear()} Leonardo Volpini - {' '}
+          <Link href="/privacy-policy" className="hover:text-white hover:underline">
+            Privacy Policy
+          </Link>
+          {/*TODO: aggiungere la P.IVA: 00000000000 */}
+        </span>
       </div>
     </footer>
   );

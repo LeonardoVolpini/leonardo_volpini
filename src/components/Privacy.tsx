@@ -1,4 +1,5 @@
 import React from "react";
+import { CookieManager } from "./CookiesManager";
 
 export const PrivacyPolicy = () => {
   return (
@@ -64,8 +65,12 @@ export const PrivacyPolicy = () => {
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">Consenso all&apos;utilizzo dei cookies</h2>
         <p>
-          Ti ricordiamo che, se non acconsenti all&apos;uso dei cookie e scegli di disabilitarli, la tua esperienza di navigazione 
+          Ti ricordiamo che, se non acconsenti all&apos;uso dei cookie e scegli di disabilitarli, la tua esperienza di navigazione
           sul nostro sito potrebbe essere compromessa, impedendoti di accedere a determinate sezioni o funzionalità.
+        </p>
+        <p>
+          Puoi modificare le tue preferenze sui cookie in qualsiasi momento, anche dopo aver fornito il consenso iniziale.
+          Puoi attraverso il seguente link: <CookieManager />
         </p>
       </section>
 
